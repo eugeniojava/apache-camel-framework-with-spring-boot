@@ -9,5 +9,4 @@ public class CamelMicroserviceAApplication {
     public static void main(String[] args) {
         SpringApplication.run(CamelMicroserviceAApplication.class, args);
     }
-
 }
