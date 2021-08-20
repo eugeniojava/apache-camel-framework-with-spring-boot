@@ -54,7 +54,7 @@ class GetCurrentTimeBean {
 @Component
 class SimpleLoggingProcessingComponent {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(SimpleLoggingProcessingComponent.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleLoggingProcessingComponent.class);
 
     public void process(String message) {
         LOGGER.info("SimpleLoggingProcessingComponent {}", message);
@@ -63,7 +63,7 @@ class SimpleLoggingProcessingComponent {
 
 class SimpleLoggingProcessor implements Processor {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(SimpleLoggingProcessor.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleLoggingProcessor.class);
 
     @Override
     public void process(Exchange exchange) throws Exception {
