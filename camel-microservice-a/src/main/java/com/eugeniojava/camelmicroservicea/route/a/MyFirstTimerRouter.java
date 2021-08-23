@@ -43,7 +43,7 @@ public class MyFirstTimerRouter extends RouteBuilder {
     }
 }
 
-@Component
+//@Component
 class GetCurrentTimeBean {
 
     public String getCurrentTime() {
@@ -51,7 +51,7 @@ class GetCurrentTimeBean {
     }
 }
 
-@Component
+//@Component
 class SimpleLoggingProcessingComponent {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SimpleLoggingProcessingComponent.class);
