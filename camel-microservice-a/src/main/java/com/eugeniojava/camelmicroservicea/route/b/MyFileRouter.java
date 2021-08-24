@@ -7,9 +7,8 @@ import org.apache.camel.Headers;
 import org.apache.camel.builder.RouteBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MyFileRouter extends RouteBuilder {
 
     private final DeciderBean deciderBean;
@@ -21,6 +20,7 @@ public class MyFileRouter extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         from("file:files/input")
+//                .pipeline()
                 .routeId("Files-Input-Route")
                 .transform().body(String.class)
                 .choice()
@@ -41,7 +41,7 @@ public class MyFileRouter extends RouteBuilder {
     }
 }
 
-@Component
+//@Component
 class DeciderBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DeciderBean.class);
@@ -53,3 +53,4 @@ class DeciderBean {
         return true;
     }
 }
+
