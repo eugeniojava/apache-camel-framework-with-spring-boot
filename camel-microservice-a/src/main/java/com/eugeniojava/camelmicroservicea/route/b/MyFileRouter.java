@@ -23,7 +23,7 @@ public class MyFileRouter extends RouteBuilder {
 //                .pipeline()
                 .routeId("Files-Input-Route")
                 .transform().body(String.class)
-                .choice()
+                .choice() // content based routing
                 .when(simple("${file:ext} == 'xml'")).log("XML FILE")
 //                .when(simple("${body} contains 'USD'"))
                 .when(method(deciderBean))
